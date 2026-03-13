@@ -158,10 +158,13 @@ Send Another Message
 </div>
 
 ) : (
-<form onSubmit={handleSubmit} className="card p-10 lg:p-12 space-y-6">
 
-{/* Name + Email */}
-<div className="grid md:grid-cols-2 gap-6">
+<form
+onSubmit={handleSubmit}
+className="bg-white shadow-xl rounded-3xl p-12 border border-gray-100"
+>
+
+<div className="grid md:grid-cols-2 gap-6 mb-6">
 
 <input
 type="text"
@@ -169,7 +172,7 @@ required
 placeholder="Full Name"
 value={formData.name}
 onChange={(e)=>setFormData({...formData,name:e.target.value})}
-className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+className="p-4 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
 />
 
 <input
@@ -178,51 +181,57 @@ required
 placeholder="Email"
 value={formData.email}
 onChange={(e)=>setFormData({...formData,email:e.target.value})}
-className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+className="p-4 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
 />
 
 </div>
 
-{/* Message */}
+<select
+required
+value={formData.service}
+onChange={(e)=>setFormData({...formData,service:e.target.value})}
+className="w-full p-4 rounded-xl border border-gray-200 bg-white text-gray-800
+focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+transition shadow-sm hover:border-gray-300"
+>
+
+<option value="" className="text-gray-400">Select a service</option>
+
+<option value="web-development">🌐 Web Development</option>
+
+<option value="saas">⚡ SaaS Platform</option>
+
+<option value="design">🎨 UI/UX Design</option>
+
+<option value="api">🔗 API Development</option>
+
+<option value="custom">💡 Custom Solution</option>
+
+</select>
+
 <textarea
 rows="5"
 required
 placeholder="Tell us about your project..."
 value={formData.message}
 onChange={(e)=>setFormData({...formData,message:e.target.value})}
-className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+className="w-full p-4 border rounded-xl mb-8 focus:ring-2 focus:ring-blue-500 outline-none"
 />
-
-{/* Service + Button */}
-<div className="grid md:grid-cols-2 gap-6 items-center">
-
-<select
-required
-value={formData.service}
-onChange={(e)=>setFormData({...formData,service:e.target.value})}
-className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
->
-
-<option value="">Select a service</option>
-<option value="web">Web Development</option>
-<option value="saas">SaaS Platform</option>
-<option value="ui">UI/UX Design</option>
-<option value="api">API Development</option>
-
-</select>
 
 <button
 type="submit"
 disabled={loading}
-className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl transition"
+className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5 rounded-xl text-lg font-bold flex items-center justify-center gap-3 hover:scale-105 transition"
 >
 
-<Send size={20}/>
+{loading ? "Sending..." : (
+<>
+<Send/>
 Send Message
+</>
+)}
 
 </button>
-
-</div>
 
 </form>
 
