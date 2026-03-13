@@ -90,7 +90,7 @@ Building scalable software solutions that power modern businesses.
 <div className="footer-bottom">
 
 <p>
-© 2026 Pearls IT Hub. All rights reserved. Built with ❤️ in Chennai.
+© 2026 Pearls IT Hub. All rights reserved. 
 </p>
 
 </div>
