@@ -1,5 +1,5 @@
 'use client'
-import { ServiceLayout } from '../components/ServiceLayout';
+import ServiceLayout from '@/components/ServiceLayout'
 import { Layout, Palette, Wand2, Zap } from 'lucide-react';
 
 const BrandingPage = () => (
