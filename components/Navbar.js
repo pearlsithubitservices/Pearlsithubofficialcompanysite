@@ -13,41 +13,55 @@ const megaMenuData = {
     href: "/services",
     categories: [
       {
-        name: "Core Services",
-        items: [
-          { name: "Artificial Intelligence", href: "/services/artificial-intelligence" },
-          { name: "Cloud Solutions", href: "/services/cloud" },
-          { name: "Consulting", href: "/services/consulting" },
-          { name: "Cybersecurity", href: "/services/cybersecurity" },
-          { name: "Enterprise Solutions", href: "/services/enterprise-solutions" },
-          { name: "Network Solutions", href: "/services/network-solutions" }
-        ]
-      },
-      {
         name: "Development",
         items: [
           { name: "Website Development", href: "/services/website-development" },
           { name: "E-Commerce Development", href: "/services/ecommerce-development" },
           { name: "Mobile App Development", href: "/services/mobile-app-development" },
-          { name: "Custom Software", href: "/services/custom-software" }
+          { name: "Custom Software", href: "/services/custom-software" },
+          { name: "UI/UX Design", href: "/services/website-development" },
+          { name: "Web Applications", href: "/services/custom-software" },
+          { name: "CRM Development", href: "/services/enterprise-solutions" },
+          { name: "Cloud Hosting", href: "/services/cloud-hosting" }
         ]
       },
       {
         name: "Marketing",
         items: [
           { name: "SEO Services", href: "/services/seo" },
-          { name: "Social Media Marketing", href: "/services/social-media-marketing" },
           { name: "Google Ads", href: "/services/google-ads" },
-          { name: "Branding", href: "/services/branding" }
+          { name: "Social Media Marketing", href: "/services/contentmarketing" },
+          { name: "Branding", href: "/services/branding" },
+          { name: "Content Marketing", href: "/services/social-media-marketing" },
+          { name: "Lead Generation", href: "/services/LeadGeneration" },
+          { name: "Email Marketing", href: "/services/emailmarketing" },
+          { name: "Performance Marketing", href: "/services/performancemonitoring" }
         ]
       },
       {
         name: "Support",
         items: [
-          { name: "Maintenance", href: "/services/maintenance" },
-          { name: "Cloud Hosting", href: "/services/cloud-hosting" },
+          { name: "Website Maintenance", href: "/services/maintenance" },
           { name: "Technical Support", href: "/services/technical-support" },
-          { name: "Startup Solutions", href: "/services/startup-solutions" }
+          { name: "Bug Fixing", href: "/services/technical-support" },
+          { name: "Hosting Support", href: "/services/cloud-hosting" },
+          { name: "Security Updates", href: "/services/cybersecurity" },
+          { name: "Backup Management", href: "/services/maintenance" },
+          { name: "Performance Monitoring", href: "/services/maintenance" },
+          { name: "24/7 Assistance", href: "/services/technical-support" }
+        ]
+      },
+      {
+        name: "Solutions",
+        items: [
+          { name: "Startup Solutions", href: "/services/startup-solutions" },
+          { name: "Enterprise Solutions", href: "/services/enterprise-solutions" },
+          { name: "Cloud Solutions", href: "/services/cloud" },
+          { name: "Network Solutions", href: "/services/network-solutions" },
+          { name: "ERP Solutions", href: "/services/enterprise-solutions" },
+          { name: "CRM Solutions", href: "/services/enterprise-solutions" },
+          { name: "Automation Solutions", href: "/services/artificial-intelligence" },
+          { name: "Business Consulting", href: "/services/consulting" }
         ]
       }
     ]
@@ -120,6 +134,7 @@ export default function Navbar() {
     { name: 'Industries', href: '/#industries' },
     { name: 'Insights', href: '/#insights' },
     { name: 'About Us', href: '/#about' },
+    { name: 'Careers', href: '/#careers' },
   ];
 
   return (

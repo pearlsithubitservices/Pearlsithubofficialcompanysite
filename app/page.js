@@ -313,10 +313,10 @@ export default function App() {
            <div className="container">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 text-center">
                  {[
-                   { n: '600+', d: 'Global Clients' },
+                   { n: '100+', d: 'Global Clients' },
                    { n: '500K', d: 'Lines of Impact' },
                    { n: '99%', d: 'Client Retention' },
-                   { n: '10+', d: 'Decades of Belief' }
+                   { n: '24/7', d: 'Support Available' }
                  ].map((stat, i) => (
                    <div key={i} className="space-y-3">
                       <div className="text-5xl md:text-8xl font-black text-white tracking-tighter">{stat.n}</div>
@@ -351,7 +351,7 @@ export default function App() {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
