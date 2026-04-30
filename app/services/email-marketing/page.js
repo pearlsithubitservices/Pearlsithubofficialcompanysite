@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Mail, Zap, Layers, Server, Globe, ArrowRight } from 'lucide-react';
 import ServiceLayout from './ServiceLayout';

@@ -1,9 +1,10 @@
+'use client'
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Target, Zap, Globe, ShieldCheck, Database } from 'lucide-react';
-import { analyzeLeads } from '../lib/gemini';
+// import { analyzeLeads } from '../lib/gemini';
 import { cn } from '../lib/utils';
-import ServiceLayout from './ServiceLayout';
+import ServiceLayout from '@/components/ServiceLayout'
 
 const INITIAL_LEADS = [
   { id: '1', name: 'Alexander Wright', email: 'alex@techflow.io', company: 'TechFlow Systems', status: 'new' },
