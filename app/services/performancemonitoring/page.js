@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { TrendingUp, Globe, DollarSign, Target, Layers } from 'lucide-react';
-import ServiceLayout from './ServiceLayout';
+import ServiceLayout from '@/components/ServiceLayout'
 
 const PERFORMANCE_DATA = [
   { day: 'Mon', spend: 400, roi: 1.2, conversions: 12 },
