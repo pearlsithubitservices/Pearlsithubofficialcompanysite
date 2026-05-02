@@ -82,7 +82,7 @@ export default function Services() {
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-slate-400 font-medium leading-relaxed max-w-2xl"
               >
-                TCS enables organizations to move beyond digital transformation into 
+                PEARLS IT HUB enables organizations to move beyond digital transformation into 
                 AI-powered reinvention— where data is not just stored but exploited.
               </motion.p>
 
@@ -197,10 +197,10 @@ export default function Services() {
                       referrerPolicy="no-referrer"
                     />
                     <h2 className="text-5xl font-black font-display tracking-tighter leading-tight">
-                      TCS and NVIDIA accelerate <br /> AI adoption for enterprises
+                      PEARLS<br /> AI adoption for enterprises
                     </h2>
                     <p className="text-xl text-slate-500 leading-relaxed font-medium">
-                      TCS and NVIDIA streamline advanced AI by analyzing data from physical AI to deliver actionable insights. 
+                    PEARLS streamline advanced AI by analyzing data from physical AI to deliver actionable insights. 
                       TCS's expertise, combined with NVIDIA's validated designs, enables enterprises to maximize the value of their infrastructure.
                     </p>
                     <div className="space-y-6 pt-4">
