@@ -99,7 +99,7 @@ pearlsithub.in@gmail.com
 <div>
 <p className="text-gray-500 text-sm">Phone</p>
 <p className="font-semibold text-lg">
-+91 98765 43210
++91 8015613840
 </p>
 </div>
 
