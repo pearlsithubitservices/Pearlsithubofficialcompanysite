@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -50,6 +51,8 @@ const industryIcons = {
 
 export default function App() {
   return (
+
+    
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-tcs-blue selection:text-white overflow-x-hidden">
       <Navbar />
 
@@ -246,68 +249,89 @@ export default function App() {
         </section>
 
         {/* --- INSIGHTS HUB --- */}
-        <section className="py-32 bg-white" id="insights">
-          <div className="container">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
-              <div className="space-y-4">
-                <span className="text-tcs-blue font-black uppercase text-sm tracking-widest">Intelligence Index 2026</span>
-                <h2 className="text-6xl font-black text-tcs-dark tracking-tighter">Knowledge.</h2>
-              </div>
-              <button className="font-black text-xl border-b-4 border-tcs-blue pb-1 hover:text-tcs-blue transition-colors">
-                View Intelligence Index →
-              </button>
-            </div>
+<section className="py-32 bg-white" id="insights">
+  <div className="container">
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-              {/* Feature Article */}
-              <div className="md:col-span-12 lg:col-span-8 group cursor-pointer">
-                <div className="aspect-[21/9] bg-tcs-dark rounded-[40px] overflow-hidden mb-12 relative border border-slate-200">
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                    alt="AI Whitepaper"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-tcs-dark via-transparent to-transparent opacity-80" />
-                  <div className="absolute bottom-10 left-10 p-2">
-                     <span className="px-4 py-2 bg-tcs-blue text-white text-xs font-black rounded-lg uppercase tracking-widest">LATEST WHITEPAPER</span>
-                  </div>
-                </div>
-                <div className="space-y-6">
-                  <h3 className="text-5xl font-black text-tcs-dark group-hover:text-tcs-blue transition-colors leading-[1.1] tracking-tight">
-                    The Quantum Sovereign Cloud: A Roadmap for Next-Gen Infrastructure.
-                  </h3>
-                  <p className="text-2xl text-slate-500 font-medium leading-relaxed max-w-4xl">
-                    Discover how nations are leveraging decentralized infrastructure to 
-                    ensure digital sovereignty while scaling global innovation.
-                  </p>
-                  <div className="flex items-center gap-10 text-sm font-black text-slate-400 uppercase tracking-[0.2em]">
-                    <span>Policy Research</span>
-                    <span>•</span>
-                    <span>15 Min Read</span>
-                  </div>
-                </div>
-              </div>
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
+      <div className="space-y-4">
+        <span className="text-blue-600 font-black uppercase text-sm tracking-widest">
+          Insights & Growth
+        </span>
+        <h2 className="text-6xl font-black text-slate-900 tracking-tighter">
+          Business Knowledge.
+        </h2>
+      </div>
 
-              {/* Side Articles */}
-              <div className="md:col-span-12 lg:col-span-4 space-y-12">
-                {[
-                  { tag: 'STRATEGY', title: 'Post-Digital Darwinism: Why agility is no longer enough.' },
-                  { tag: 'SECURITY', title: 'Adaptive Zero Trust: Protecting the edge of everything.' },
-                  { tag: 'ESG', title: 'Carbon Neutral Computation: The rise of Green DevOps.' }
-                ].map((article, i) => (
-                  <div key={i} className="group cursor-pointer border-b border-slate-100 pb-10 last:border-0 hover:bg-slate-50 p-4 rounded-3xl transition-colors">
-                    <span className="text-tcs-blue font-black text-xs uppercase tracking-widest block mb-4">{article.tag}</span>
-                    <h4 className="text-2xl font-black text-tcs-dark group-hover:text-tcs-blue transition-colors leading-tight tracking-tight">
-                      {article.title}
-                    </h4>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <button className="font-black text-xl border-b-4 border-blue-600 pb-1 hover:text-blue-600 transition-colors">
+        View All Articles →
+      </button>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+
+      {/* MAIN ARTICLE */}
+      <div className="md:col-span-12 lg:col-span-8 group cursor-pointer">
+        <div className="aspect-[21/9] rounded-[40px] overflow-hidden mb-10 relative border">
+          <img 
+           src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070&auto=format&fit=crop"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            alt="Digital Growth"
+          />
+          
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+          <div className="absolute bottom-6 left-6">
+            <span className="px-4 py-2 bg-blue-600 text-white text-xs font-bold rounded-lg uppercase tracking-widest">
+              FEATURED
+            </span>
           </div>
-        </section>
+        </div>
 
+        <div className="space-y-5">
+          <h3 className="text-4xl font-black text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">
+            How Digital Solutions Help Businesses Grow Faster
+          </h3>
+
+          <p className="text-lg text-slate-500 leading-relaxed">
+            Discover how websites, applications, and digital marketing can help your business attract more customers, improve efficiency, and scale faster.
+          </p>
+
+          <div className="flex items-center gap-6 text-sm font-bold text-slate-400 uppercase tracking-wider">
+            <span>Business Growth</span>
+            <span>•</span>
+            <span>5 Min Read</span>
+          </div>
+        </div>
+      </div>
+
+      {/* SIDE ARTICLES */}
+      <div className="md:col-span-12 lg:col-span-4 space-y-10">
+
+        {[
+          { tag: 'MARKETING', title: 'How Digital Marketing Can Increase Your Leads' },
+          { tag: 'WEBSITE', title: 'Why Every Business Needs a Professional Website' },
+          { tag: 'SOFTWARE', title: 'Choosing the Right Software for Your Business' }
+        ].map((article, i) => (
+          <div
+            key={i}
+            className="group cursor-pointer border-b pb-6 hover:bg-slate-50 p-4 rounded-xl transition"
+          >
+            <span className="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-3">
+              {article.tag}
+            </span>
+
+            <h4 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              {article.title}
+            </h4>
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+  </div>
+</section>
         {/* --- GLOBAL IMPACT BAR --- */}
         <section className="py-24 bg-slate-950 text-white relative">
            <div className="container">
@@ -341,10 +365,13 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-8 pt-8">
               <button className="bg-tcs-blue text-white px-16 py-8 rounded-full font-black text-2xl hover:bg-tcs-dark transition-all shadow-2xl shadow-tcs-blue/40 active:scale-95">
-                Contact Our Specialists
+               
+                 <Link href="/contact" className="bg-white hover:bg-blue-50 text-slate-950 px-7 py-2.5 rounded-full text-xs font-bold tracking-widest transition-all hover:scale-105 active:scale-95 uppercase">
+            Contact Our Specialists
+          </Link>
               </button>
               <button className="bg-slate-100 text-tcs-dark px-16 py-8 rounded-full font-black text-2xl hover:bg-slate-200 transition-all active:scale-95">
-                Careers Hub
+              <Link href="/careers">Careers Hub</Link>
               </button>
             </div>
           </div>

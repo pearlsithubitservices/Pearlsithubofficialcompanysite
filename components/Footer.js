@@ -32,12 +32,28 @@ export default function Footer() {
               We help enterprises reimagine their businesses for the digital age.
             </p>
             <div className="flex gap-4">
-              {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all group">
-                  <Icon className="w-5 h-5 text-white/60 group-hover:text-white" />
-                </a>
-              ))}
-            </div>
+
+  {/* LinkedIn */}
+  <a 
+    href="https://www.linkedin.com/company/pearlsithub/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all group"
+  >
+    <Linkedin className="w-5 h-5 text-white/60 group-hover:text-white" />
+  </a>
+
+  {/* Instagram */}
+  <a 
+    href="https://www.instagram.com/pearls_ithub/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 transition-all group"
+  >
+    <Instagram className="w-5 h-5 text-white/60 group-hover:text-white" />
+  </a>
+
+</div>
           </div>
 
           <div className="lg:col-span-2">
