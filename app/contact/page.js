@@ -16,21 +16,45 @@ message:''
 const [submitted,setSubmitted] = useState(false)
 const [loading,setLoading] = useState(false)
 
-const handleSubmit = async(e)=>{
-e.preventDefault()
-setLoading(true)
+const handleSubmit = async (e) => {
 
-await new Promise(resolve => setTimeout(resolve,1500))
+  e.preventDefault();
 
-setSubmitted(true)
-setLoading(false)
+  setLoading(true);
 
-setFormData({
-name:'',
-email:'',
-service:'',
-message:''
-})
+  try {
+
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+
+      setSubmitted(true);
+
+      setFormData({
+        name: '',
+        email: '',
+        service: '',
+        message: ''
+      });
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
+
+  }
+
+  setLoading(false);
+
 }
 
 return (
