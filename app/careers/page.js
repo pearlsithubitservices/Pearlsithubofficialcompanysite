@@ -28,7 +28,7 @@ const subNavbarLinks = [
 const jobs = [
   {
     role: "Web Developer",
-    experience: "Fresher to 1 Year",
+    experience: "Fresher to 2 Year",
     type: "Full-time",
     icon: Code2,
     tags: ["React", "Node.js", "Tailwind CSS"],
