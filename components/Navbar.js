@@ -30,7 +30,7 @@ const megaMenuData = {
         items: [
           { name: "SEO Services", href: "/services/seo" },
           { name: "Google Ads", href: "/services/google-ads" },
-          { name: "Social Media Marketing", href:"/services/social-media-marketing"  },
+          { name: "Social Media Marketing", href: "/services/social-media-marketing" },
           { name: "Branding", href: "/services/branding" },
           { name: "Content Marketing", href: "/services/content-marketing" },
           { name: "Lead Generation", href: "/services/LeadGeneration" },
@@ -76,32 +76,32 @@ const megaMenuData = {
       {
         name: "Business",
         items: [
-          { name: "Banking", href: "/industries/banking" },
-          { name: "Insurance", href: "/industries/insurance" },
-          { name: "Retail", href: "/industries/retail" }
+          { name: "Banking", href: "/" },
+          { name: "Insurance", href: "/" },
+          { name: "Retail", href: "/" }
         ]
       },
       {
         name: "Healthcare",
         items: [
-          { name: "Hospitals", href: "/industries/hospitals" },
-          { name: "Pharma", href: "/industries/pharma" },
-          { name: "Medical Devices", href: "/industries/medical-devices" }
+          { name: "Hospitals", href: "/" },
+          { name: "Pharma", href: "/" },
+          { name: "Medical Devices", href: "/" }
         ]
       },
       {
         name: "Manufacturing",
         items: [
-          { name: "Automotive", href: "/industries/automotive" },
-          { name: "Industrial Products", href: "/industries/industrial-products" }
+          { name: "Automotive", href: "/" },
+          { name: "Industrial Products", href: "/" }
         ]
       },
       {
         name: "Education",
         items: [
-          { name: "Schools", href: "/industries/schools" },
-          { name: "Colleges", href: "/industries/colleges" },
-          { name: "EdTech", href: "/industries/edtech" }
+          { name: "Schools", href: "/" },
+          { name: "Colleges", href: "/" },
+          { name: "EdTech", href: "/" }
         ]
       }
     ]
@@ -113,7 +113,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState(null);
   const [activeCategory, setActiveCategory] = useState(0);
- const pathname = usePathname();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,7 +127,7 @@ export default function Navbar() {
   useEffect(() => {
     setActiveMegaMenu(null);
     setIsOpen(false);
- }, [pathname]);
+  }, [pathname]);
 
   const navLinks = [
     { name: 'Services', href: '/#services' },
@@ -138,10 +138,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-        scrolled || activeMegaMenu ? 'bg-slate-950 border-b border-white/5 py-4' : 'bg-transparent py-7'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled || activeMegaMenu ? 'bg-slate-950 border-b border-white/5 py-4' : 'bg-transparent py-7'
+        }`}
       onMouseLeave={() => {
         setActiveMegaMenu(null);
         setActiveCategory(0);
@@ -162,16 +161,15 @@ export default function Navbar() {
         {/* DESKTOP LINKS */}
         <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
-            <div 
+            <div
               key={link.name}
               onMouseEnter={() => setActiveMegaMenu(link.name)}
               className="relative py-2"
             >
-              <Link 
-                href={link.href}
-                className={`text-xs font-bold uppercase tracking-widest transition-colors flex items-center gap-1.5 group ${
-                  activeMegaMenu === link.name ? 'text-white' : 'text-slate-400 hover:text-white'
-                }`}
+              <Link
+                href={link.href || "/"}
+                className={`text-xs font-bold uppercase tracking-widest transition-colors flex items-center gap-1.5 group ${activeMegaMenu === link.name ? 'text-white' : 'text-slate-400 hover:text-white'
+                  }`}
               >
                 {link.name}
                 <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeMegaMenu === link.name ? 'rotate-180 opacity-100' : 'opacity-30'}`} />
@@ -230,9 +228,8 @@ export default function Navbar() {
                   <button
                     key={cat.name}
                     onMouseEnter={() => setActiveCategory(idx)}
-                    className={`w-full text-left py-3 px-4 rounded-xl flex items-center justify-between transition-all font-bold text-sm tracking-tight ${
-                      activeCategory === idx ? 'bg-white/5 text-white' : 'text-slate-500 hover:text-slate-300'
-                    }`}
+                    className={`w-full text-left py-3 px-4 rounded-xl flex items-center justify-between transition-all font-bold text-sm tracking-tight ${activeCategory === idx ? 'bg-white/5 text-white' : 'text-slate-500 hover:text-slate-300'
+                      }`}
                   >
                     {cat.name}
                     <ChevronRight className={`w-4 h-4 transition-transform ${activeCategory === idx ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0'}`} />
@@ -241,17 +238,17 @@ export default function Navbar() {
               </div>
 
               {/* Specific Items */}
-             <div className="col-span-6 grid grid-cols-2 gap-x-12 gap-y-6 pl-8">
-  {megaMenuData[activeMegaMenu].categories[activeCategory].items.map((item, idx) => (
-    <Link
-      key={idx}
-      href={item.href}
-      className="text-slate-400 hover:text-white font-medium text-sm transition-colors block py-1"
-    >
-      {item.name}
-    </Link>
-  ))}
-</div>
+              <div className="col-span-6 grid grid-cols-2 gap-x-12 gap-y-6 pl-8">
+                {megaMenuData[activeMegaMenu].categories[activeCategory].items.map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    className="text-slate-400 hover:text-white font-medium text-sm transition-colors block py-1"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
@@ -259,7 +256,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           className="lg:hidden bg-slate-950 border-t border-white/5 py-8 px-6 flex flex-col gap-6"
@@ -269,8 +266,8 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="w-full bg-blue-600 text-white py-4 rounded-full font-bold uppercase tracking-widest text-sm mt-4 text-center"
             onClick={() => setIsOpen(false)}
           >
