@@ -78,11 +78,9 @@ export default function App() {
           <div className="container relative z-20">
             <div className="max-w-4xl space-y-8">
 
-              <span className="text-blue-400 font-bold uppercase tracking-[0.3em] text-sm">
-                Pearls IT Hub
-              </span>
+              
 
-              <h1 className="text-6xl md:text-8xl font-black text-white leading-tight">
+              <h1 className="text-6xl md:text-8xl mt-8 font-black text-white leading-tight">
                 Build Your <br />
                 <span className="text-blue-400">Digital Future</span>
               </h1>
@@ -98,7 +96,9 @@ export default function App() {
                 </button>
 
                 <button className="border border-white/40 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">
+                  <Link href="/contact">
                   Contact Us
+                  </Link>
                 </button>
               </div>
             </div>

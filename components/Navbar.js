@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Globe, Search, ArrowRight, ChevronRight } from 'l
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const megaMenuData = {
   Services: {
@@ -146,16 +147,29 @@ export default function Navbar() {
         setActiveCategory(0);
       }}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between ">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center transform hover:rotate-6 transition-transform shadow-lg shadow-blue-600/30">
-            <span className="text-white font-bold text-xl uppercase italic">P</span>
+        <Link
+          href="/"
+          className="flex flex-col items-center justify-center group"
+        >
+          {/* Logo */}
+          <div className="relative flex flex-col items-center justify-center ">
+            <Image
+              src="/logos/Pearls-Transparent.png"
+              alt="Pearls IT Hub"
+              width={155}
+              height={20}
+              priority
+              className="object-contain object- border scale-110  transition-all duration-300 group-hover:scale-105 rounded"
+            />
+            <span className="mt-1 ml-1 text-[10px] text-blue-400 font-semibold tracking-[0.35em] uppercase text-center whitespace-nowrap">
+            Digital Excellence
+          </span>
           </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold font-display tracking-tight text-white uppercase italic leading-[1]">PEARLS IT HUB</span>
-            <span className="text-[9px] text-blue-400 font-bold tracking-[0.3em] uppercase mt-1">Digital Excellence</span>
-          </div>
+
+          {/* Tagline */}
+          
         </Link>
 
         {/* DESKTOP LINKS */}
