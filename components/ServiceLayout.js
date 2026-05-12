@@ -115,7 +115,7 @@ export default function ServiceLayout({
               <h2 className="text-7xl md:text-[100px] font-black font-display tracking-tighter leading-none">
                 Ready to <br /> <span className="text-pearl-blue italic">Innovate?</span>
               </h2>
-              <Link href="/" className="inline-block bg-white text-slate-950 px-16 py-8 rounded-full font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl">
+              <Link href="/contact" className="inline-block bg-white text-slate-950 px-16 py-8 rounded-full font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl">
                 Consult with Experts
               </Link>
            </div>

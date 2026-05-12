@@ -30,9 +30,9 @@ const megaMenuData = {
         items: [
           { name: "SEO Services", href: "/services/seo" },
           { name: "Google Ads", href: "/services/google-ads" },
-          { name: "Social Media Marketing", href: "/services/contentmarketing" },
+          { name: "Social Media Marketing", href:"/services/social-media-marketing"  },
           { name: "Branding", href: "/services/branding" },
-          { name: "Content Marketing", href: "/services/social-media-marketing" },
+          { name: "Content Marketing", href: "/services/content-marketing" },
           { name: "Lead Generation", href: "/services/LeadGeneration" },
           { name: "Email Marketing", href: "/services/emailmarketing" },
           { name: "Performance Marketing", href: "/services/performancemonitoring" }
