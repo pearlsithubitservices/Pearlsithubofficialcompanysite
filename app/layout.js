@@ -13,9 +13,20 @@ export const metadata = {
   title: "Pearls IT Hub ",
   description: "Web, App & Digital Solutions Company",
   icons: {
-    //icon: "/favicon.ico",
-    icon: "/logos/Pearls.png",
-  },
+    icon: [
+      {
+        url: "/logos/Pearls1.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+       {
+        url: "/logos/Pearls1.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ]
+  }
+
 };
 
 export default function RootLayout({ children }) {
