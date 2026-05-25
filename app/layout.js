@@ -10,10 +10,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 // ✅ ADD THIS
 export const metadata = {
-  title: "Pearls IT Hub",
+  title: "Pearls IT Hub ",
   description: "Web, App & Digital Solutions Company",
   icons: {
-    icon: "/favicon.ico",
+    //icon: "/favicon.ico",
+    icon: "/logos/Pearls.png",
   },
 };
 
