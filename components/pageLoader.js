@@ -1,33 +1,33 @@
 'use client'
 import { useEffect, useState } from "react"
 
-export default function PageLoader({children}){
+export default function PageLoader({ children }) {
 
-const [loading,setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
 
-useEffect(()=>{
-setTimeout(()=>{
-setLoading(false)
-},1200)
-},[])
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 1200)
+    }, [])
 
-if(loading){
-return(
+    if (loading) {
+        return (
 
-<div className="loader-screen">
+            <div className="loader-screen">
 
-<div className="loader">
+                <div className="loader">
 
-<div className="loader-circle"></div>
+                    <div className="loader-circle"></div>
 
-<p>Loading Experience...</p>
+                    <p>Loading Experience...</p>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-)
-}
+        )
+    }
 
-return children
+    return children
 }

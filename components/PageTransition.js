@@ -5,63 +5,63 @@ import { usePathname } from "next/navigation"
 
 export default function PageTransition({ children }) {
 
-const pathname = usePathname()
+    const pathname = usePathname()
 
-const rows = 6
-const cols = 10
-const total = rows * cols
+    const rows = 6
+    const cols = 10
+    const total = rows * cols
 
-return (
+    return (
 
-<AnimatePresence mode="wait">
+        <AnimatePresence mode="wait">
 
-<motion.div key={pathname} style={{position:"relative"}}>
+            <motion.div key={pathname} style={{ position: "relative" }}>
 
-{/* GRID ANIMATION */}
+                {/* GRID ANIMATION */}
 
-<div className="page-transition-grid">
+                <div className="page-transition-grid">
 
-{[...Array(total)].map((_,i)=>(
+                    {[...Array(total)].map((_, i) => (
 
-<motion.div
-key={i}
-className="grid-tile"
+                        <motion.div
+                            key={i}
+                            className="grid-tile"
 
-initial={{scaleY:0}}
-animate={{scaleY:0}}
-exit={{scaleY:1}}
+                            initial={{ scaleY: 0 }}
+                            animate={{ scaleY: 0 }}
+                            exit={{ scaleY: 1 }}
 
-transition={{
-duration:0.4,
-delay:i*0.015
-}}
+                            transition={{
+                                duration: 0.4,
+                                delay: i * 0.015
+                            }}
 
-style={{
-transformOrigin:"top"
-}}
-/>
+                            style={{
+                                transformOrigin: "top"
+                            }}
+                        />
 
-))}
+                    ))}
 
-</div>
+                </div>
 
-{/* PAGE CONTENT */}
+                {/* PAGE CONTENT */}
 
-<motion.div
-initial={{opacity:0,y:30}}
-animate={{opacity:1,y:0}}
-exit={{opacity:0,y:-30}}
-transition={{duration:0.4}}
->
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -30 }}
+                    transition={{ duration: 0.4 }}
+                >
 
-{children}
+                    {children}
 
-</motion.div>
+                </motion.div>
 
-</motion.div>
+            </motion.div>
 
-</AnimatePresence>
+        </AnimatePresence>
 
-)
+    )
 
 }

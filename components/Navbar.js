@@ -156,14 +156,14 @@ export default function Navbar() {
           {/* Logo */}
           <div className="relative flex flex-col items-center justify-center ">
            <div className='flex  items-center  overflow-hidden h-[50px]'>
-            <Image
+            {/* <Image
               src="/logos/Pearls.png"
               alt="Pearls IT Hub"
               width={65}
               height={25}
               priority
               className="  object-contain object- border scale-110  transition-all duration-300 group-hover:scale-105 rounded"
-            />
+            /> */}
             <h1  className='tracking-wide text-gray-500 font-bold -space-x-1'><span className='text-blue-400'>PEARLS </span> IT HUB</h1>
             </div>
             <span className="mt-1 ml-6 text-[10px] text-blue-400 font-semibold tracking-[0.35em] uppercase text-center whitespace-nowrap -space-y-3">
