@@ -135,7 +135,7 @@ export default function Navbar() {
     { name: 'Industries', href: '/#industries' },
     { name: 'Insights', href: '/#insights' },
     { name: 'About Us', href: '/#about' },
-    { name: 'Careers', href: '/#careers' },
+    { name: 'Careers', href: '/careers' },
   ];
 
   return (

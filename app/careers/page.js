@@ -62,9 +62,9 @@ const jobs = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 selection:bg-tcs-blue selection:text-white">
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-tcs-blue selection:text-white ">
       {/* --- SUB NAVBAR --- */}
-      <div className="bg-slate-900 text-white py-4 mt-0 sticky top-0 z-50">
+       <div className="bg-slate-900 text-white py-4 mt-0 sticky top-0 z-50">
         <div className="container mx-auto px-4 flex items-center gap-8">
           <div className="flex items-center gap-3 text-xs font-black uppercase tracking-widest">
             <a href="/" className="hover:text-tcs-light transition-colors">Home</a>
@@ -84,11 +84,11 @@ export default function App() {
             ))}
           </nav>
         </div>
-      </div>
+      </div> 
 
       <main>
         {/* --- HERO SECTION --- */}
-        <section className="relative h-[85vh] flex items-center overflow-hidden bg-slate-950">
+        <section className="relative h-[85vh] flex items-center overflow-hidden bg-slate-950  ">
           <div className="absolute inset-0">
              <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
@@ -103,7 +103,7 @@ export default function App() {
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-4 text-tcs-light font-black uppercase tracking-[0.4em] text-xs"
+                className="flex items-center gap-4 text-tcs-light font-black uppercase tracking-[0.4em] text-xs mt-40"
               >
                 JOIN THE TRIBE / OPPORTUNITIES
               </motion.div>
