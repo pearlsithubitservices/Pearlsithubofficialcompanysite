@@ -1,13 +1,13 @@
 // 'use client'
 
-// import Particles from "react-tsparticles"
-// import { loadFull } from "tsparticles"
+// import Particles from "@tsparticles/react";
+// import { loadSlim } from "@tsparticles/slim";
 
 // export default function ParticlesBackground(){
 
-// const particlesInit = async (main) => {
-// await loadFull(main)
-// }
+// const particlesInit = async (engine) => {
+//   await loadSlim(engine);
+// };
 
 // return(
 
