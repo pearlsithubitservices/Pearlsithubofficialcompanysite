@@ -4,7 +4,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
-  
+
   --color-tcs-blue: #1e22aa;
   --color-tcs-light: #00bff3;
   --color-tcs-dark: #1b1d21;
@@ -23,17 +23,30 @@
   }
 }
 
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .animate-slow-zoom {
   animation: slow-zoom 20s ease-in-out infinite alternate;
 }
 
 @keyframes slow-zoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-tcs-blue to-tcs-light;
 }
-
-
