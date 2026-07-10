@@ -165,7 +165,7 @@ export const CareerData = {
             experience: "1 - 3 Years",
             type: "Full Time",
             icon: Handshake,
-            tags: ["Lead Generation", "Business Development", "CRM"],
+            tags: ["Lead Generations", "Business Development", "CRM"],
             description: "Generate new business opportunities, nurture client relationships, conduct market research, and collaborate with the sales team to drive business growth."
         }
     ]
