@@ -18,6 +18,7 @@ import {
   Sparkles,
   Router
 } from 'lucide-react';
+import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation';
 import CareerData from '@/components/CareerData';
 import { useRouter } from 'next/navigation';
@@ -68,7 +69,7 @@ const subNavbarLinks = [
 //   }
 // ];
 
-export default function App() {
+ function CareersContent() {
   const [openForm, setOpenForm] = useState(false);
 
   console.log(openForm);
@@ -391,5 +392,12 @@ export default function App() {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+export default function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CareersContent />
+    </Suspense>
   );
 }
